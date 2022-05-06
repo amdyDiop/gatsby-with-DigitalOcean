@@ -4,13 +4,23 @@ import { StaticImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import * as DemoStyles from "./static-files-demo.module.css"
+import helloWorldPdf from "../gatsby-static-files-tutorial-assets-main/hello-world.pdf"
 
 
 const StaticFilesDemo = () => (
     <Layout>
         <Seo title="Static Files Demo" />
         <h1 className={DemoStyles.headerText}>Static Files Demo</h1>
-
+        <section>
+            <h2>Arbitrary Static Files</h2>
+            <a href={helloWorldPdf} title="Download the Hello World file">
+                Access the Hello World file by clicking here.
+            </a>
+            <br />
+            <a href="/time-off-form.pdf" title="Time Off Form">
+                Request Time Off - Form to fill out and submit.
+            </a>
+        </section>
         <section  className={'demo row around-xs  ' + DemoStyles.container}>
             <h2 className="col-xs-12">Static Image Files Demo</h2>
 
