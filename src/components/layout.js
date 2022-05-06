@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import "../../node_modules/flexboxgrid/dist/flexboxgrid.min.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`

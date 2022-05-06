@@ -14,7 +14,7 @@ module.exports = {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: `images`,
-                path: `${__dirname}/src/images`,
+                path: `${__dirname}/src/blog`,
             },
         },
         `gatsby-transformer-sharp`,
@@ -33,6 +33,34 @@ module.exports = {
                 icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
             },
         },
+        {
+            resolve: `gatsby-plugin-manifest`,
+            options: {
+                name: `My Smart-Home Guide`,
+                short_name: `SH Guide`,
+                description: `Guide for residents of the ABC123 Smart Home`,
+                start_url: `/`,
+                background_color: `#0a68f0`,
+                theme_color: `#0a68f0`,
+                display: `standalone`,
+                icon: `src/images/pwa-icon.png`,
+                icons: [
+                    {
+                        src: `/favicons/pwa-icon-192x192.png`,
+                        sizes: `192x192`,
+                        type: `image/png`
+                    },
+                    {
+                        src: `/favicons/pwa-icon-512x512.png`,
+                        sizes: `512x512`,
+                        type: `image/png`
+                    }
+                ]
+            },
+        },
+        `gatsby-plugin-offline`,
+        `gatsby-transformer-remark`,
+
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
         // `gatsby-plugin-offline`,
